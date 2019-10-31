@@ -72,6 +72,7 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 2px; }
   .heading-secondary:hover {
@@ -163,6 +164,33 @@ body {
   transform: translateY(-0.2rem);
   background-color: #fff;
   color: #55c57a; }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.3s; }
+    .composition__photo--1 {
+      top: -5rem;
+      left: 0; }
+    .composition__photo--2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--3 {
+      top: 10rem;
+      left: 20%; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #55c57a;
+      outline-offset: 2rem;
+      transform: scale(1.1) translateY(-5rem);
+      box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.4);
+      z-index: 2; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
 
 .header {
   height: 95vh;
