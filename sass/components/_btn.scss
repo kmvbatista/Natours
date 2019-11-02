@@ -27,11 +27,22 @@
 
   &--white {
     background-color: $color-white;
-    color: #777;
+    color: $color-gray-dark;
     margin-top: 6rem;
 
     &::after {
       background-color: #fff;
+      color: $color-gray-dark;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    margin-top: 6rem;
+
+    &::after {
+      background-color: $color-primary;
       color: #777;
     }
   }
