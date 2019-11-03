@@ -29,7 +29,7 @@
         background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
       }
       &-3 {
-        background-image: linear-gradient(to right bottom, $color-terciary-light, $color-terciary-dark);
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
       }
     }
   }
@@ -59,7 +59,7 @@
         height: 23rem;
     }
     &--3 {
-      background-image: linear-gradient(to right bottom, $color-terciary-light, $color-terciary-dark),
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
         url("../img/nat-7.jpg");
     }
   }
@@ -97,8 +97,8 @@
     &--3 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-terciary-light, 0.85),
-        rgba($color-terciary-dark, 0.85)
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
       );
     }
   }
