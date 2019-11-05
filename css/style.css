@@ -325,7 +325,9 @@ body {
   border-radius: 3px;
   padding: 6rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg); }
+  transform: skewX(-12deg);
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 1; }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -360,6 +362,17 @@ body {
   .story:hover .story__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(0.8); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  opacity: .3;
+  object-fit: cover;
+  overflow: hidden; }
 
 .header {
   height: 95vh;
@@ -402,7 +415,7 @@ body {
 
 .section-stories {
   padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative; }
 
 .row {
   max-width: 114rem;

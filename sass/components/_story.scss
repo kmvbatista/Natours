@@ -6,6 +6,8 @@
   padding: 6rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  background-color: rgba($color: $color-white, $alpha: 0.6);
+  z-index: 1;
 
   &__shape {
     width: 15rem;
@@ -53,3 +55,4 @@
     filter: blur(3px) brightness(.8);
   }
 }
+
