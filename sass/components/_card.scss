@@ -6,7 +6,7 @@
 
   &__side {
     transition: transform 0.8s;
-    border-radius: 3px;
+    border-radius: $border-radius-default;
     position: absolute;
     height: 51rem;
     left: 0;
