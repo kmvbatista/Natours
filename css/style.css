@@ -1,3 +1,13 @@
+/*
+  0-600px phone
+  600-900 tablets portrait
+  900- 1200px tablet landscape
+  1200-1800 normal
+  1800px   big 
+
+
+  order : BAse + typography > general layout + grid > page layout > components 
+*/
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -5,9 +15,22 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
+  padding: 3rem;
   box-sizing: border-box; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0rem; } }
 
 @keyframes moveInLeft {
   0% {
@@ -43,8 +66,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -56,6 +78,10 @@ body {
     font-size: 6rem;
     letter-spacing: 3.5rem;
     animation: moveInLeft 2s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -64,6 +90,9 @@ body {
     animation-name: moveInRight;
     animation-duration: 2s;
     animation-timing-function: ease-in; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -78,6 +107,12 @@ body {
   .heading-secondary:hover {
     transform: skew(2deg, 15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5); }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
 
 .heading-tertiary {
   text-transform: uppercase;
