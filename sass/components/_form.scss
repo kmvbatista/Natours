@@ -16,6 +16,10 @@
     display: block;
     transition: all .6s;
 
+    @include respond(tabPort) {
+      width: 100%;
+    }
+
     &::-webkit-input-placeholder {
       color: $color-gray-dark;
     }
@@ -51,6 +55,10 @@
   &__radio-group {
     width: 40%;
     display: inline-block;
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
   &__radio-label {
     cursor: pointer;
