@@ -83,12 +83,14 @@
     top: 0;
     right: 0;
     z-index: 1500;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 0;
     width: 0;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   &__list {
+    opacity: 0;
+    width: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -100,7 +102,7 @@
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
-  &__checkbox:checked ~ &__nav {
+  &__checkbox:checked ~ &__nav, &__checkbox:checked ~ &__nav &__list{
     width: 100%;
     opacity: 1;
   }
