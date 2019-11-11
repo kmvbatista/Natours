@@ -4,9 +4,17 @@
   },
   "scripts": {
     "start": "yarn run lite-server",
-    "sass": "node-sass sass/main.scss css/style.css -w"
+    "sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-fonts.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css ",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build": "yarn compile:sass && yarn concat:css && yarn prefix:css && yarn compress:css"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "autoprefixer": "^9.7.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.0",
+    "postcss-cli": "^6.1.3"
   }
 }

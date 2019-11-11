@@ -18,6 +18,7 @@
     
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      
       @include respond(tabPort) {
         margin-right: 0;
         margin-bottom: $gutter-vertical-small;
